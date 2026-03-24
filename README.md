@@ -7,7 +7,6 @@ A dynamic security tool that scans Python/Flask applications for cryptographic t
 ## 📋 Table of Contents
 
 - [What It Does](#what-it-does)
-- [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [CLI Reference](#cli-reference)
@@ -38,27 +37,6 @@ For every finding, it produces:
 
 ---
 
-## Project Structure
-
-```
-cbom-auditor/
-│
-├── cbom_audit.py              # Main entry point — CLI, orchestration, dashboard
-│
-├── cbom_scanner/
-│   ├── __init__.py            # Package exports
-│   ├── scanner.py             # AST + dependency + config scanners, CryptoFinding dataclass
-│   └── exporters.py          # Markdown, JSON, and CycloneDX output formatters
-│
-├── sample_app.py              # Example Flask app — target for demo scans
-├── requirements.txt           # Project dependencies
-│
-└── keys/                      # Demo keys (do not use in production)
-    ├── private_rsa2048.pem
-    ├── public_rsa2048.pem
-    ├── server.key
-    └── server.crt
-```
 
 ---
 
